@@ -1,0 +1,8 @@
+; ModuleID = 'tritonModule'
+source_filename = "tritonModule"
+
+define i64 @__triton(i64 %SymVar_7) {
+entry:
+  %0 = add i64 %SymVar_7, -16
+  ret i64 %0
+}

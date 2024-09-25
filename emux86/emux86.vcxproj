@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a5e668dc-07f8-47a8-b7f7-d1be4a96b79b}</ProjectGuid>
+    <RootNamespace>emux86</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>emux64</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Administrator\Desktop\vmp\Triton\src\libtriton\includes\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\Administrator\Desktop\vmp\LLVM15\Release\include;C:\Users\Administrator\Desktop\vmp\VM_Analyze\VM_Analyze\demox64\triton\release\include;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>$(IncludePath);$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>C:\Users\Administrator\Desktop\vmp\VM_Analyze\VM_Analyze\emux86\retdec\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="asm2llvmir.h" />
+    <ClInclude Include="emu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\LLVM15\Release\lib\clangAnalysis.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangAnalysisFlowSensitive.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangAnalysisFlowSensitiveModels.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangAPINotes.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangARCMigrate.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangAST.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangASTMatchers.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangBasic.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangCrossTU.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangDependencyScanning.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangDirectoryWatcher.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangDriver.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangDynamicASTMatchers.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangEdit.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangExtractAPI.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangFormat.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangFrontend.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangFrontendTool.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangHandleCXX.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangHandleLLVM.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangIndex.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangIndexSerialization.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangInterpreter.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangLex.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangParse.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangRewrite.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangRewriteFrontend.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangSema.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangSerialization.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangStaticAnalyzerCheckers.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangStaticAnalyzerCore.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangStaticAnalyzerFrontend.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangSupport.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangTooling.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangToolingASTDiff.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangToolingCore.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangToolingInclusions.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangToolingRefactoring.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangToolingSyntax.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\clangTransformer.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\libclang.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\lldCOFF.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\lldCommon.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\lldELF.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\lldMachO.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\lldMinGW.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\lldWasm.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVM-C.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAArch64AsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAArch64CodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAArch64Desc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAArch64Disassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAArch64Info.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAArch64Utils.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAggressiveInstCombine.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAMDGPUAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAMDGPUCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAMDGPUDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAMDGPUDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAMDGPUInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAMDGPUTargetMCA.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAMDGPUUtils.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAnalysis.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMARMAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMARMCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMARMDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMARMDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMARMInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMARMUtils.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAsmPrinter.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAVRAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAVRCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAVRDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAVRDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMAVRInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBinaryFormat.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBitReader.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBitstreamReader.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBitWriter.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBPFAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBPFCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBPFDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBPFDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMBPFInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMCFGuard.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMCFIVerify.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMCore.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMCoroutines.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMCoverage.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDebugInfoCodeView.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDebuginfod.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDebugInfoDWARF.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDebugInfoGSYM.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDebugInfoMSF.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDebugInfoPDB.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDemangle.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDiff.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDlltoolDriver.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDWARFLinker.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMDWP.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMExecutionEngine.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMExegesis.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMExegesisAArch64.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMExegesisMips.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMExegesisPowerPC.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMExegesisX86.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMExtensions.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMFileCheck.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMFrontendOpenACC.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMFrontendOpenMP.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMFuzzerCLI.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMFuzzMutate.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMGlobalISel.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMHexagonAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMHexagonCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMHexagonDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMHexagonDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMHexagonInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMInstCombine.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMInstrumentation.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMInterfaceStub.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMInterpreter.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMipo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMIRReader.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMJITLink.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLanaiAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLanaiCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLanaiDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLanaiDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLanaiInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLibDriver.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLineEditor.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLinker.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMLTO.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMC.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMCA.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMCDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMCJIT.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMCParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMipsAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMipsCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMipsDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMipsDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMipsInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMIRParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMSP430AsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMSP430CodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMSP430Desc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMSP430Disassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMMSP430Info.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMNVPTXCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMNVPTXDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMNVPTXInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMObjCARCOpts.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMObjCopy.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMObject.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMObjectYAML.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMOption.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMOrcJIT.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMOrcShared.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMOrcTargetProcess.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMPasses.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMPowerPCAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMPowerPCCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMPowerPCDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMPowerPCDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMPowerPCInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMProfileData.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMRemarks.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMRISCVAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMRISCVCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMRISCVDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMRISCVDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMRISCVInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMRuntimeDyld.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMScalarOpts.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSelectionDAG.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSparcAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSparcCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSparcDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSparcDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSparcInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSupport.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSymbolize.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSystemZAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSystemZCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSystemZDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSystemZDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMSystemZInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMTableGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMTableGenGlobalISel.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMTarget.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMTextAPI.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMTransformUtils.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMVEAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMVECodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMVectorize.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMVEDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMVEDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMVEInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWebAssemblyAsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWebAssemblyCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWebAssemblyDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWebAssemblyDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWebAssemblyInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWebAssemblyUtils.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWindowsDriver.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMWindowsManifest.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMX86AsmParser.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMX86CodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMX86Desc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMX86Disassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMX86Info.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMX86TargetMCA.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMXCoreCodeGen.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMXCoreDesc.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMXCoreDisassembler.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMXCoreInfo.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LLVMXRay.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\LTO.lib" />
+    <Library Include="..\..\..\LLVM15\Release\lib\Remarks.lib" />
+    <Library Include="..\demox64\triton\release\lib\triton.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
